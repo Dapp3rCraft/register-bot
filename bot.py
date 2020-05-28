@@ -44,7 +44,9 @@ async def on_member_remove(member):
 
 @client.event
 async def on_member_join(member):
-    pass
+    channel = client.get_channel(708017717726150729)
+    id = member.id
+    await channel.send(f"<@{id}> **Welcome to Dapp3rCraft**\nRegister by typing `r!register <your mc username>` or just `r!register`")
 
 @client.command()
 async def ping(msg):
