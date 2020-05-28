@@ -51,6 +51,8 @@ class Register(commands.Cog):
                     if line.split(" ")[0] != new_line:
                         z.write(line)
             open("registered.txt", "a").write(f"{msg.message.author.id} {mc_username}\n")
+        elif (oldname != mc_username + "\n") and (mc_username == "/register"):
+
         else:
             await msg.send("You are already registered!")
 
