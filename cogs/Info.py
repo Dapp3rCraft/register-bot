@@ -11,7 +11,7 @@ class Info(commands.Cog):
     @commands.command()
     async def help(self, msg):
         helpEmbed = discord.Embed(
-            title="DuckBot Help", 
+            title="RegisterBot Help", 
             description="[**dapp3rcraft.com**](http://www.dapp3rcraft.com/)"
         )
         for cmd in self.info:

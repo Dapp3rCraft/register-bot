@@ -1,4 +1,4 @@
-cd /mnt/7CBA242F2095461E/duckbot
+cd /mnt/7CBA242F2095461E/register-bot
 git checkout master
 git pull
 git add -A
