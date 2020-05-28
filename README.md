@@ -4,23 +4,6 @@
 ![](https://img.shields.io/github/issues/Dapp3rDuck/register-bot?style=flat-square)
 ![](https://img.shields.io/github/v/release/Dapp3rDuck/register-bot?include_prereleases&style=flat-square)<br/>
 
-**&nbsp;&nbsp;&nbsp;Duck bot is a discord bot, made using [discord's python api](https://discordpy.readthedocs.io/en/latest/). It is used for Minecraft commands and registering for the server.**
-
-### FAQ
-**Why does it exist?**<br>
-idk
-
-**Why did I make it?**<br>
-idk
-
-## Getting Started
-
-Create a new application in the [discord developer portal](https://discord.com/developers/applications) and copy the token<br>
-Create a new file named .env which contains ```TOKEN = "<your token here>"```<br>
-Create a new file called registered.txt<br>
-Invite the bot<br>
-Run: ```d!help```
-
 ## Contributors
 <table>
   <tr>
