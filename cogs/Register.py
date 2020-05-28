@@ -10,6 +10,7 @@ class Register(commands.Cog):
 
     async def whitelist(self, msg, mc_username, user):
         channel = self.client.get_channel(707777532555952158)
+        await self.client.change_nickname(mc_username)
         await channel.send(f"whitelist add {mc_username}")
         await msg.send(f"Registered {str(user)} as {mc_username}\nJoin the Minecraft server with ip: **dapp3rcraft.com**")
 
