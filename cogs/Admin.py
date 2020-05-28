@@ -42,10 +42,11 @@ class Admin(commands.Cog):
     async def kick(self, msg):
         user = msg.message.author
         admin_role = get(user.guild.roles, name="Admin")
+        mod_role = get(user.guild.roles, name="Mod")
         mc_username = msg.message.content.replace("r!kick ", "")
         console_channel = self.client.get_channel(707777532555952158)
 
-        if admin_role in user.roles: 
+        if (admin_role in user.roles) or (mod_role in user.roles): 
             await console_channel.send(f"kick {mc_username}")
             await msg.send(f"**{mc_username}** has been kicked from the minecraft server.")
         else: 

@@ -4,7 +4,7 @@ help = {
     "register": "Allows new users access to the server",
     "ban": "Admins can ban users from the minecraft server",
     "unban": "Admins can unban users from the minecraft server",
-    "kick": "Admins can kick users from the minecraft server"
+    "kick": "Admins and Mods can kick users from the minecraft server"
 }
 
 bot_admins = [
