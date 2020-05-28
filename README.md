@@ -1,8 +1,8 @@
-# DuckBot
+# Register Bot
 ![](https://img.shields.io/badge/build-passing-green/?style=flat-square)
-![](https://img.shields.io/github/repo-size/Dapp3rDuck/duckbot?style=flat-square)
-![](https://img.shields.io/github/issues/Dapp3rDuck/duckbot?style=flat-square)
-![](https://img.shields.io/github/v/release/Dapp3rDuck/duckbot?include_prereleases&style=flat-square)<br/>
+![](https://img.shields.io/github/repo-size/Dapp3rDuck/register-bot?style=flat-square)
+![](https://img.shields.io/github/issues/Dapp3rDuck/register-bot?style=flat-square)
+![](https://img.shields.io/github/v/release/Dapp3rDuck/register-bot?include_prereleases&style=flat-square)<br/>
 
 **&nbsp;&nbsp;&nbsp;Duck bot is a discord bot, made using [discord's python api](https://discordpy.readthedocs.io/en/latest/). It is used for Minecraft commands and registering for the server.**
 
