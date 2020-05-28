@@ -16,7 +16,7 @@ class Admin(commands.Cog):
     async def ban(self, msg):
         user = msg.message.author
         admin_role = get(user.guild.roles, name="Admin")
-        mc_username = msg.message.content.replace("r!ban ", "")
+        mc_username = msg.message.content.replace("/ban ", "")
         console_channel = self.client.get_channel(707777532555952158)
 
         if admin_role in user.roles:
@@ -29,7 +29,7 @@ class Admin(commands.Cog):
     async def unban(self, msg):
         user = msg.message.author
         admin_role = get(user.guild.roles, name="Admin")
-        mc_username = msg.message.content.replace("r!unban ", "")
+        mc_username = msg.message.content.replace("/unban ", "")
         console_channel = self.client.get_channel(707777532555952158)
 
         if admin_role in user.roles: 
@@ -43,7 +43,7 @@ class Admin(commands.Cog):
         user = msg.message.author
         admin_role = get(user.guild.roles, name="Admin")
         mod_role = get(user.guild.roles, name="Mod")
-        mc_username = msg.message.content.replace("r!kick ", "")
+        mc_username = msg.message.content.replace("/kick ", "")
         console_channel = self.client.get_channel(707777532555952158)
 
         if (admin_role in user.roles) or (mod_role in user.roles): 

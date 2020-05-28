@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-client = commands.Bot(command_prefix="r!")
+client = commands.Bot(command_prefix="/")
 client.remove_command("help")
 
 async def remove_whitelist(mc_username, member, discord_id):
@@ -46,7 +46,7 @@ async def on_member_remove(member):
 async def on_member_join(member):
     channel = client.get_channel(708017717726150729)
     id = member.id
-    await channel.send(f"<@{id}> **Welcome to Dapp3rCraft**\nRegister by typing `r!register <your mc username>` or just `r!register`")
+    await channel.send(f"<@{id}> **Welcome to Dapp3rCraft**\nRegister by typing `/register <your mc username>` or just `/register`")
 
 @client.command()
 async def ping(msg):
