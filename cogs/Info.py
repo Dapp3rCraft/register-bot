@@ -16,7 +16,7 @@ class Info(commands.Cog):
         )
         for cmd in self.info:
             helpEmbed.add_field(
-                name=f"d!{cmd}",
+                name=f"/{cmd}",
                 value=self.info[cmd], 
                 inline=False
             )
