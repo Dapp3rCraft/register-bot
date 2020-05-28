@@ -33,7 +33,7 @@ class Register(commands.Cog):
             await user.add_roles(role)
             if mc_username != "/register":
                 await self.whitelist(msg, mc_username, user)
-                await self.client.change_nickname(mc_username)
+                await msg.message.author.edit(nick=mc_username)
                 f.write(f"{msg.message.author.id} {mc_username}\n")
             else:
                 await msg.send("Registered " + str(user))
@@ -43,7 +43,7 @@ class Register(commands.Cog):
             console_channel = self.client.get_channel(707777532555952158)
             await console_channel.send(f"whitelist remove {oldname}")
             await self.whitelist(msg, mc_username, user)
-            await self.client.change_nickname(mc_username)
+            await msg.message.author.edit(nick=mc_username)
             new_line = str(msg.message.author.id)
             lines = open("registered.txt", "r").readlines()
             with open("registered.txt", "w") as z:
