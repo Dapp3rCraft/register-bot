@@ -12,9 +12,7 @@ client.remove_command("help")
 
 async def remove_whitelist(mc_username, member, discord_id):
     console_channel = client.get_channel(707777532555952158)
-    general_channel = client.get_channel(361645469094379522)
     await console_channel.send(f"whitelist remove {mc_username}")
-    await general_channel.send(f"**{member.name}** left the server")
     new_line = str(discord_id)
     lines = open("registered.txt", "r").readlines()
     with open("registered.txt", "w") as f:
@@ -34,6 +32,8 @@ async def on_ready():
 
 @client.event
 async def on_member_remove(member):
+    general_channel = client.get_channel(361645469094379522)
+    await general_channel.send(f"**{member.name}** left the server")
     registered = open("registered.txt", "r").readlines()
     for user in registered:
         user = user.split(" ")
