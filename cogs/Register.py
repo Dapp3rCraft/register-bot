@@ -12,7 +12,10 @@ class Register(commands.Cog):
         channel = self.client.get_channel(707777532555952158)
         await channel.send(f"whitelist add {mc_username}")
         await msg.send(f"Registered {str(user)} as {mc_username}\nJoin the Minecraft server with ip: **dapp3rcraft.com**")
-        await msg.message.author.edit(nick=mc_username)
+        try:
+            await msg.message.author.edit(nick=mc_username)
+        except:
+            pass
 
     @commands.command()
     async def register(self, msg):
