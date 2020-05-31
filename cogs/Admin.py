@@ -26,6 +26,19 @@ class Admin(commands.Cog):
             await msg.send("You do not have permission to use this command!")
 
     @commands.command()
+    async def pardon(self, msg):
+        user = msg.message.author
+        admin_role = get(user.guild.roles, name="Admin")
+        mc_username = msg.message.content.replace("/unban ", "")
+        console_channel = self.client.get_channel(707777532555952158)
+
+        if admin_role in user.roles: 
+            await console_channel.send(f"pardon {mc_username}")
+            await msg.send(f"**{mc_username}** has been unbanned from the minecraft server.")
+        else: 
+            await msg.send("You do not have permission to use this command!")
+
+    @commands.command()
     async def unban(self, msg):
         user = msg.message.author
         admin_role = get(user.guild.roles, name="Admin")
