@@ -29,7 +29,7 @@ class Admin(commands.Cog):
     async def pardon(self, msg):
         user = msg.message.author
         admin_role = get(user.guild.roles, name="Admin")
-        mc_username = msg.message.content.replace("/unban ", "")
+        mc_username = msg.message.content.replace("/pardon ", "")
         console_channel = self.client.get_channel(707777532555952158)
 
         if admin_role in user.roles: 
