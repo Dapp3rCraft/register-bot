@@ -19,7 +19,7 @@ class Prerenderer(commands.Cog):
         if admin_role in user.roles:
             if self.is_prerendering:
                 return msg.send('Prerendering is already active!')
-            self.set_interval(check_status, 300)
+            self.set_interval(self.check_status, 300)
             msg.send('Prerendering will start when no one is online to prevent lag!')
         else: 
             return msg.send('You do not have permission to use this command!')
@@ -33,11 +33,11 @@ class Prerenderer(commands.Cog):
         return t
 
     def check_status(self):
-        player_count = count_players_online(self.server_addr)
+        player_count = self.count_players_online(self.server_addr)
         if player_count == 0:
-            return start_prerendering()
+            return self.start_prerendering()
         elif self.is_prerendering:
-            return stop_prerendering()
+            return self.stop_prerendering()
 
     def count_players_online(self, addr):
         server = MinecraftServer.lookup(addr)
@@ -46,15 +46,17 @@ class Prerenderer(commands.Cog):
 
     async def start_prerendering(self):
         self.is_prerendering = True
-        console_channel = client.get_channel(707777532555952158)
-        await console_channel.send('wb fill start')
+        await self.send_msg(707777532555952158, 'wb fill start')
         return print('Started prerendering...')
 
     async def stop_prerendering(self):
         self.is_prerendering = False
-        console_channel = client.get_channel(707777532555952158)
-        await console_channel.send('wb fill pause')
+        await self.send_msg(707777532555952158, 'wb fill pause')
         return print('Stopped prerendering...')
+
+    async def send_msg(self, channel_id, msg):
+        channel = self.client.get_channel(channel_id)
+        return await channel.send(msg)
 
 def setup(client):
     client.add_cog(Prerenderer(client))
