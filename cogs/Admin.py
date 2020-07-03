@@ -9,8 +9,6 @@ class Admin(commands.Cog):
 
     def __init__(self, client):
         self.client = client
-        self.admins = info.bot_admins
-    
 
     @commands.command()
     async def ban(self, msg):
