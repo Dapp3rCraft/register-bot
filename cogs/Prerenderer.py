@@ -25,6 +25,19 @@ class Prerenderer(commands.Cog):
         else: 
             return msg.send('You do not have permission to use this command!')
 
+    @commands.command()
+    async def renderstop(self, msg):
+        print('Stopping rendering process...')
+        user = msg.message.author
+        admin_role = get(user.guild.roles, name="Administrator")
+        if admin_role in user.roles:
+            if not self.is_prerendering:
+                return await msg.send('Prerendering is already stopped!')
+            await msg.send('Prerendering has stopped.')
+            self.stop_prerendering()
+        else: 
+            return msg.send('You do not have permission to use this command!')
+
     def set_interval(self, func, sec):
         def func_wrapper():
             self.set_interval(func, sec)
