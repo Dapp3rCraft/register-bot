@@ -14,13 +14,14 @@ class Prerenderer(commands.Cog):
 
     @commands.command()
     async def renderstart(self, msg):
+        print('Starting rendering process...')
         user = msg.message.author
-        admin_role = get(user.guild.roles, name="Admin")
+        admin_role = get(user.guild.roles, name="Administrator")
         if admin_role in user.roles:
             if self.is_prerendering:
-                return msg.send('Prerendering is already active!')
+                return await msg.send('Prerendering is already active!')
+            await msg.send('Prerendering will start when no one is online to prevent lag!')
             self.set_interval(self.check_status, 300)
-            msg.send('Prerendering will start when no one is online to prevent lag!')
         else: 
             return msg.send('You do not have permission to use this command!')
 
