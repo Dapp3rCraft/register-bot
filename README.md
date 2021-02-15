@@ -1,8 +1,8 @@
 # Register Bot
 ![](https://img.shields.io/badge/build-passing-green/?style=flat-square)
-![](https://img.shields.io/github/repo-size/Dapp3rDuck/register-bot?style=flat-square)
-![](https://img.shields.io/github/issues/Dapp3rDuck/register-bot?style=flat-square)
-![](https://img.shields.io/github/v/release/Dapp3rDuck/register-bot?include_prereleases&style=flat-square)<br/>
+![](https://img.shields.io/github/repo-size/Dapp3rCraft/register-bot?style=flat-square)
+![](https://img.shields.io/github/issues/Dapp3rCraft/register-bot?style=flat-square)
+![](https://img.shields.io/github/v/release/Dapp3rCraft/register-bot?include_prereleases&style=flat-square)<br/>
 
 ## Contributors
 <table>
